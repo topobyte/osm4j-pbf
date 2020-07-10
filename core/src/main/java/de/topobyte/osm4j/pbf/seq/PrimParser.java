@@ -291,9 +291,15 @@ public class PrimParser
 			if (fetchMetadata && nodes.hasDenseinfo()) {
 				version = denseInfo.getVersion(i);
 				timestamp += denseInfo.getTimestamp(i);
-				uid += denseInfo.getUid(i);
-				userSid += denseInfo.getUserSid(i);
-				changeset += denseInfo.getChangeset(i);
+				if (denseInfo.getUidCount() > 0) {
+					uid += denseInfo.getUid(i);
+				}
+				if (denseInfo.getUserSidCount() > 0) {
+					userSid += denseInfo.getUserSid(i);
+				}
+				if (denseInfo.getChangesetCount() > 0) {
+					changeset += denseInfo.getChangeset(i);
+				}
 				boolean visible = true;
 				if (hasVisible) {
 					visible = denseInfo.getVisible(i);
@@ -357,9 +363,15 @@ public class PrimParser
 			if (fetchMetadata && nodes.hasDenseinfo()) {
 				version = denseInfo.getVersion(i);
 				timestamp += denseInfo.getTimestamp(i);
-				uid += denseInfo.getUid(i);
-				userSid += denseInfo.getUserSid(i);
-				changeset += denseInfo.getChangeset(i);
+				if (denseInfo.getUidCount() > 0) {
+					uid += denseInfo.getUid(i);
+				}
+				if (denseInfo.getUserSidCount() > 0) {
+					userSid += denseInfo.getUserSid(i);
+				}
+				if (denseInfo.getChangesetCount() > 0) {
+					changeset += denseInfo.getChangeset(i);
+				}
 				boolean visible = true;
 				if (hasVisible) {
 					visible = denseInfo.getVisible(i);
